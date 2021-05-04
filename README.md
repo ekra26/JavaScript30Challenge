@@ -13,4 +13,7 @@ Please visit <a href="https://javascript30.com/" target="_blank">JavaScript30</a
 
 #### Other information
 
-* Project status: In progress - Day 1
+* Project status: 
+
+1. Day 1 - JS Drum Kit: Completed 
+2. Day 2 - JS + CSS Clock: In Progress
