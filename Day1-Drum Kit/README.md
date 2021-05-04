@@ -12,5 +12,9 @@ Please visit <a href="https://javascript30.com/" target="_blank">JavaScript30</a
 
 #### Other information
 
-* Project status: In progress
+* Project status: **Completed**
+
+* Improvement ideas: 
+1. Use letter numbers instead of letter to identify key pressed
+2. Improve code readability
 
