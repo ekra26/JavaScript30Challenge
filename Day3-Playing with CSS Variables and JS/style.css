@@ -5,7 +5,7 @@
 }
 html {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
     background-color:darkseagreen;
     color: white;
@@ -28,4 +28,9 @@ img {
 #color {
     width: 125px;
     height: 40px;
+}
+
+#blur,
+#spacing {
+    background-color: var(--coloreffect);
 }

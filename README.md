@@ -18,3 +18,4 @@ Please visit <a href="https://javascript30.com/" target="_blank">JavaScript30</a
 1. Day 1 - JS Drum Kit: Complete
 2. Day 2 - JS + CSS Clock: Complete
 3. Day 3 - Playing with CSS Variables and JS: Complete
+4. Day 4 - Array Cardio Day 1: Complete
