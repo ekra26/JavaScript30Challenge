@@ -7,9 +7,8 @@ Please visit <a href="https://javascript30.com/" target="_blank">JavaScript30</a
 
 ### Technologies/Languages
 
-* HTML
 * JavaScript
 
 #### Other information
 
-* Project status: **In progress*
+* Project status: **Complete*

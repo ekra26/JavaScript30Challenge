@@ -37,28 +37,72 @@
     
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
+    var inventors1500 = inventors.filter(inventor => inventor.year >= 1500 && inventor.year < 1600);
+    
+    console.log(inventors1500);//returns the regular array without formating//
+    console.table(inventors1500);//returns a formatted table!//
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors first and last names
+    var inventorsFullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
+    
+    console.table(inventorsFullNames);
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
+    var inventorsCopy = inventors.map((x) => x);
+    
+    var inventorsOldest = inventorsCopy.sort(function(a,b){return b.year - a.year});
+    
+    console.table(inventorsOldest);
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
+    const inventorsTotalLivedYears = inventors.reduce((total, inventor) => {
+        var yearsLived = (inventor.passed-inventor.year);
+        return total + yearsLived;
+    },0);
+
+    console.table(`The inventors lived ${inventorsTotalLivedYears} years all together!`);
 
     // 5. Sort the inventors by years lived
+    var inventorsCopy2 = inventors.map((x) => x);
+    
+    var inventorsLivedYearsSort = inventorsCopy2.sort(function(a,b){
+        return ((b.passed - b.year) - (a.passed - a.year));
+    });
+    
+    console.log(inventorsLivedYearsSort);
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+    //you can call querrySelector against any existing DOM element
+    var links = Array.from(document.querySelectorAll('.mw-category a')); //querrySelector returns a NodeList, so must convet into array
+    
+    // another way to turn this into array
+    // var links = [...category.querySelectorAll('a')]);
+    var de = links
+                .map(link =>link.textContent)
+                .filter(streetName => streetName.includes('de'));
 
+    console.log(de); //will not return anything because it needs to be run in the wiki site
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
+    var peopleLastSorted = people.sort(); //does not sort name, only last name
+    
+    console.log(peopleLastSorted);
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+    
+    var dataReduced = data.reduce((tally, transport) => {
+        tally[transport]= (tally[transport] || 0) + 1;
+        return tally;
+    },{});
+
+    console.log(dataReduced);
 
   </script>
 </body>
