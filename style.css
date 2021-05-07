@@ -1,0 +1,18 @@
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    background-color: orchid;
+}
+
+.contentborder {
+    /* border: 5px solid white; */
+    height: 100%;
+    border-radius: 25px;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    background-color: lavender;
+    padding: 20px;
+}
