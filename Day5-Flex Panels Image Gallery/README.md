@@ -7,7 +7,9 @@ Please visit <a href="https://javascript30.com/" target="_blank">JavaScript30</a
 ### Technologies/Languages
 
 * CSS flexbox
+* JavaScript
+* HTML
 
 #### Other information
 
-* Project status: **In Progress**
+* Project status: **Complete**
