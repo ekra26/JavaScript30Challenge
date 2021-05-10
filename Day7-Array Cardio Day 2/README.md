@@ -11,4 +11,4 @@ Please visit <a href="https://javascript30.com/" target="_blank">JavaScript30</a
 
 #### Other information
 
-* Project status: **In Progress*
+* Project status: **Complete**
