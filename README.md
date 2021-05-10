@@ -20,4 +20,4 @@ Please visit <a href="https://javascript30.com/" target="_blank">JavaScript30</a
 3. Day 3 - Playing with CSS Variables and JS: Complete
 4. Day 4 - Array Cardio Day 1: Complete 
 5. Day 5 - Flex Panels Image Gallery: Complete
-
+6. Day 6 - Ajax Type Ahead: Complete
