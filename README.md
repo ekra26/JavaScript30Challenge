@@ -22,4 +22,4 @@ Please visit <a href="https://javascript30.com/" target="_blank">JavaScript30</a
 5. Day 5 - Flex Panels Image Gallery: Complete
 6. Day 6 - Ajax Type Ahead: Complete
 7. Day 7 - Array Cardio Day 2: Complete
-8. Day 8 - Fun with HTML5 Canvas: In Progress
+8. Day 8 - Fun with HTML5 Canvas: Complete

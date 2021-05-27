@@ -13,10 +13,82 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <canvas id="draw" width="800" height="800"></canvas>
+        <h1>Use your imagination. Draw something below!</h1>
+        <canvas id="draw" width="800" height="800">Your browser does not support the HTML canvas tag.</canvas>
 
-        
-        <script src="" async defer></script>
+        <script>
+            //grab canvas element
+            const c = document.getElementById("draw");
+
+            //define the context where we will draw on 2d
+            const ctx = c.getContext("2d");
+            
+            //resize canvas to window size as default is 800px
+            c.width = window.innerWidth;
+            c.height = window.innerHeight;
+
+            //styles for drawing
+            ctx.strokeStyle = '#BADA55';
+            ctx.lineJoin = 'round';
+            ctx.lineCap = 'round';
+            ctx.lineWidth = 100;
+            ctx.globalCompositeOperation = 'multiply'; //blends colors
+
+            //dummy variables for drawing status, location, hue color, and direction
+            let isDrawing = false;
+            let lastX = 0;
+            let lastY = 0;
+            let hue = 0;
+            let direction = true;
+
+            //function to draw
+            function draw(e) {
+                if (!isDrawing) return; //stops the function from running when move is not down
+
+                //set the initial color
+                ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+
+                ctx.beginPath();
+                //start from
+                ctx.moveTo(lastX, lastY);
+                //go to
+                ctx.lineTo(e.offsetX, e.offsetY);
+                ctx.stroke();
+                
+                //update starting values
+                lastX = e.offsetX;
+                lastY = e.offsetY;
+
+                //change the color and reset if over 360
+                hue++;
+                if (hue >= 360) {
+                    hue = 0;
+                }
+
+                //increment line width
+                if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1){
+                    direction = !direction;
+                }
+
+                if (direction) {
+                    ctx.lineWidth++;
+                } else {
+                    ctx.lineWidth--;
+                }
+            };
+
+            //Event listeners
+            c.addEventListener('mousedown',(e) => {
+                isDrawing = true;
+                lastX = e.offsetX;
+                lastY = e.offsetY;
+            });
+
+            c.addEventListener('mousemove', draw);
+            c.addEventListener('mouseup',() => isDrawing = false);
+            c.addEventListener('mouseout',() => isDrawing = false);
+            
+        </script>
         <style>
             html, body {
                 margin: 0;
