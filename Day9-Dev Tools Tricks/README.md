@@ -10,9 +10,17 @@ Please visit <a href="https://javascript30.com/" target="_blank">JavaScript30</a
 
 * HTML
 * JavaScript
+* Developer tools - Console tricks
 
 #### Other information
 
-* Project status: **In Progress**
+* Project status: **Complete**
 
-* Learnings:
+* Learnings: This exercise helped me gain new knowledge and confidence in using the console. Some of the methods learned are:
+    - Count
+    - Time 
+    - Group (including groupEnd and GroupCollapse)
+    - Warm
+    - Error
+    - Dir
+    - Table 

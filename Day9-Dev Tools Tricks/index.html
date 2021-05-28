@@ -6,7 +6,7 @@
 </head>
 <body>
 
-  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+  <p onClick="makeGreen()">What is changing this?</p>
 
   <script>
     const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
@@ -16,31 +16,74 @@
       p.style.color = '#BADA55';
       p.style.fontSize = '50px';
     }
+    //To see how makeGreen works in the screen, we can Breakon and attribute modifications. 
 
     // Regular
+    console.log('This is the regular use, to log something to the console');
 
     // Interpolated
-
+    const firstDogName = dogs[1].name;
+    console.log('Interpolate allows you to insert a variable or something from another source. Example: %s comes from another source!', +firstDogName);
+    console.log(`Interpolate allows you to insert a variable or something from another source. Example: ${firstDogName} comes from another source!`);
+    
     // Styled
+    console.log('%c I am so great text', 'font-size: 50px; background: red; text-shadow: 10px 10px 0 blue');
 
     // warning!
+    console.warn('NOOOOO');
 
     // Error :|
+    console.error('NOOOOOOOOOOOO');
 
     // Info
+    console.info('I am coding here');
 
-    // Testing
+    // Testing - helps test if something is wrong
+    let p = document.querySelector('p');
 
-    // clearing
+    console.assert(p.classList.contains('ouch'), 'I am coding here'); // fires if something is wrong
 
-    // Viewing DOM Elements
+    // clearing - deletes everything you have logged on your console
+    //console.clear(); //clears your console
 
-    // Grouping together
+    // Viewing DOM Elements - allows to access more info about elements
+    console.log(p);
+    console.dir(p); //opens up element so we can see methods and other info
 
-    // counting
+    // Grouping together - groups info acording to a specified term
+    dogs.forEach( dog => { 
+        console.group(`${dog.name}`);
+        console.log(`This is ${dog.name}`);
+        console.log(`${dog.name} is ${dog.age} years old`);
+        console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+        console.groupEnd(`${dog.name}`);
+    })
 
-    // timing
+    dogs.forEach( dog => { 
+        console.groupCollapsed(`${dog.name}`);
+        console.log(`This is ${dog.name}`);
+        console.log(`${dog.name} is ${dog.age} years old`);
+        console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+        console.groupEnd(`${dog.name}`);
+    })
 
+    // counting - counts how many times you have logged something
+    console.count('Ouch');
+    console.count('Ouch');
+    console.count('Ouch');
+    console.count('Ouch');
+
+    // timing - starts a timer to see how long it takes to do something
+    console.time('fetching data');
+    fetch('https://api.github.com/users/ekra26')
+        .then(data => data.json())
+        .then(data => {
+            console.timeEnd('fetching data');
+            console.log(data);
+        });
+    
+    //table - display the table on a table
+    console.table(dogs);
   </script>
 </body>
 </html>

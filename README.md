@@ -23,4 +23,4 @@ Please visit <a href="https://javascript30.com/" target="_blank">JavaScript30</a
 6. Day 6 - Ajax Type Ahead: Complete
 7. Day 7 - Array Cardio Day 2: Complete
 8. Day 8 - Fun with HTML5 Canvas: Complete
-9. Day 9 - 14 Must Know Dev Tools Tricks: In progress
+9. Day 9 - 14 Must Know Dev Tools Tricks: Complete
