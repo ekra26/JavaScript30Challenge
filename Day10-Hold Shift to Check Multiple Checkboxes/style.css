@@ -1,0 +1,46 @@
+html {
+    font-family: 'helvetica neue';
+    font-size: 20px;
+    justify-content: center;
+    font-weight: 200;
+}
+
+body {
+    background-color: #ffc600;
+    align-content: center;
+}
+
+.container {
+    margin: 50px auto;
+    background-color: white;
+    display: flex;
+    max-width: 400px;
+    flex-flow: column;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
+}
+
+.item {
+    display: flex;
+    flex: row;
+    height: 60px;
+    border-bottom: 1px solid #F1F1F1;
+    align-items: center;
+}
+
+.item label {
+    padding-left: 15px;
+    border-left: 1px solid #D1E2FF;
+    margin-left: 10px;
+}
+
+.item:last-child {
+      border-bottom: 0;
+}
+
+p {
+    font-weight: 500;
+    padding-left: 10px;
+}
+

@@ -24,4 +24,4 @@ Please visit <a href="https://javascript30.com/" target="_blank">JavaScript30</a
 7. Day 7 - Array Cardio Day 2: Complete
 8. Day 8 - Fun with HTML5 Canvas: Complete
 9. Day 9 - 14 Must Know Dev Tools Tricks: Complete
-10. Day 10 - Hold Shift to Check Multiple Checkboxes: In progress
+10. Day 10 - Hold Shift to Check Multiple Checkboxes: Complete
